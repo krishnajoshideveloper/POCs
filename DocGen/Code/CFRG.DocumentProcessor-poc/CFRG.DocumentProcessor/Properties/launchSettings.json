@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CFRG.DocumentProcessor": {
+      "commandName": "Project",
+      "commandLineArgs": "https://raw.githubusercontent.com/krishnajoshideveloper/POCs/main/DocGen/Data/sample-invoice.docx\r\nhttps://raw.githubusercontent.com/krishnajoshideveloper/POCs/main/DocGen/Data/sample-invoice-data.json\r\ntemp-docs"
+    }
+  }
+}
