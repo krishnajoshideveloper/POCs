@@ -21,14 +21,12 @@ try
     {
         Document processedDoc = new Document(document.docUrl);
 
-        // Fetch document data. 
-        //string documentJsonData = string.Empty;
-        //using (var httpClient = new HttpClient())
-        //{
-        //    documentJsonData = await httpClient.GetStringAsync(document.docDataUrl);
-        //}
-
-        string documentJsonData = GetDummyData();
+        // Fetch document data.
+        string documentJsonData = string.Empty;
+        using (var httpClient = new HttpClient())
+        {
+            documentJsonData = await httpClient.GetStringAsync(document.docDataUrl);
+        }        
 
         // Create dataset.
         DataSet documentDataset = JsonConvert.DeserializeObject<DataSet>(documentJsonData);
@@ -52,39 +50,4 @@ try
 catch (Exception ex)
 {
     Console.WriteLine(ex.ToString());
-}
-
-static string GetDummyData()
-{
-    return @"{
-  ""Order"": [
-    {
-      ""Number"": ""23"",
-      ""Address"": ""Nelson Street"",
-      ""Suburb"": ""Howick"",
-      ""City"": ""Auckland"",
-      ""Phonenumber"": ""543 1234"",
-      ""Date"": ""03/01/2010"",
-      ""Total"": ""14.00"",
-      ""Order_Id"": 0
-    }
-  ],
-  ""Item"": [
-    {
-      ""Name"": ""BBQ Chicken Pizza"",
-      ""Price"": ""6.00"",
-      ""Quantity"": ""1"",
-      ""ItemTotal"": ""6.00"",
-      ""Order_Id"": 0
-    },
-    {
-      ""Name"": ""1.5 Litre Coke"",
-      ""Price"": ""4.00"",
-      ""Quantity"": ""2"",
-      ""ItemTotal"": ""8.00"",
-      ""Order_Id"": 0
-    }
-  ]
-}
-";
 }
