@@ -1,0 +1,70 @@
+{
+  "documents": [
+    {
+      "documentType": "sample-invoice",
+      "data": {
+        "Order": [
+          {
+            "Number": "23",
+            "Address": "Nelson Street",
+            "Suburb": "Howick",
+            "City": "Auckland",
+            "Phonenumber": "543 1234",
+            "Date": "03/01/2010",
+            "Total": "14.00",
+            "Order_Id": 0
+          }
+        ],
+        "Item": [
+          {
+            "Name": "BBQ Chicken Pizza",
+            "Price": "6.00",
+            "Quantity": "1",
+            "ItemTotal": "6.00",
+            "Order_Id": 0
+          },
+          {
+            "Name": "1.5 Litre Coke",
+            "Price": "4.00",
+            "Quantity": "2",
+            "ItemTotal": "8.00",
+            "Order_Id": 0
+          }
+        ]
+      }
+    },
+    {
+      "documentType": "sample-invoice",
+      "data": {
+        "Order": [
+          {
+            "Number": "10",
+            "Address": "Parkville Avenue",
+            "Suburb": "Pakuranga",
+            "City": "Auckland",
+            "Phonenumber": "548 7342",
+            "Date": "05/03/2010",
+            "Total": "6.00",
+            "Order_Id": 1
+          }
+        ],
+        "Item": [
+          {
+            "Name": "Hawaiian Pizza",
+            "Price": "4.00",
+            "Quantity": "1",
+            "ItemTotal": "4.00",
+            "Order_Id": 1
+          },
+          {
+            "Name": "Fries",
+            "Price": "1.00",
+            "Quantity": "2",
+            "ItemTotal": "2.00",
+            "Order_Id": 1
+          }
+        ]
+      }
+    }
+  ]
+}
